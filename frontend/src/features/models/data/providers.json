@@ -484,7 +484,7 @@
           "type": "chat"
         },
         {
-          "id": "nvidia/riva-translate-4b-instruct-v1_1",
+          "id": "nvidia/riva-translate-4b-instruct-v1.1",
           "name": "riva-translate-4b-instruct-v1_1",
           "description": "Translation model for multilingual conversion, localization, and cross-language workflows",
           "attachment": false,
@@ -513,6 +513,42 @@
             "output": 0
           },
           "display_name": "riva-translate-4b-instruct-v1_1",
+          "type": "chat"
+        },
+        {
+          "id": "nvidia/cosmos-reason2-8b",
+          "name": "Cosmos Reason2 8B",
+          "description": "Vision language model for physical-world understanding with structured reasoning on video and images",
+          "attachment": true,
+          "reasoning": {
+            "supported": true,
+            "default": true
+          },
+          "reasoning_options": [],
+          "tool_call": true,
+          "temperature": true,
+          "release_date": "2025-12-01",
+          "last_updated": "2025-12-01",
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": true,
+          "limit": {
+            "context": 131072,
+            "output": 16384
+          },
+          "cost": {
+            "input": 0,
+            "output": 0
+          },
+          "display_name": "Cosmos Reason2 8B",
           "type": "chat"
         },
         {
@@ -548,7 +584,49 @@
           "type": "chat"
         },
         {
-          "id": "nvidia/llama-3_1-nemotron-safety-guard-8b-v3",
+          "id": "nvidia/nemotron-nano-12b-v2-vl",
+          "name": "Nemotron Nano 12B v2 VL",
+          "description": "Nemotron multimodal model for visual reasoning and agentic AI workflows",
+          "family": "nemotron",
+          "attachment": true,
+          "reasoning": {
+            "supported": true,
+            "default": true
+          },
+          "reasoning_options": [],
+          "tool_call": true,
+          "temperature": true,
+          "release_date": "2025-10-28",
+          "last_updated": "2025-10-28",
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": true,
+          "limit": {
+            "context": 128000,
+            "output": 128000
+          },
+          "cost": {
+            "input": 0,
+            "output": 0
+          },
+          "display_name": "Nemotron Nano 12B v2 VL",
+          "type": "chat",
+          "extra_capabilities": {
+            "reasoning": {
+              "supported": true
+            }
+          }
+        },
+        {
+          "id": "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
           "name": "llama-3.1-nemotron-safety-guard-8b-v3",
           "description": "Safety model for policy screening, moderation, and risk-aware routing workflows",
           "family": "nemotron",
@@ -618,6 +696,45 @@
             "output": 0
           },
           "display_name": "nvidia-nemotron-nano-9b-v2",
+          "type": "chat"
+        },
+        {
+          "id": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+          "name": "Llama 3.3 Nemotron Super 49B v1.5",
+          "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
+          "family": "nemotron",
+          "attachment": false,
+          "reasoning": {
+            "supported": true,
+            "default": true
+          },
+          "reasoning_options": [
+            {
+              "type": "toggle"
+            }
+          ],
+          "tool_call": true,
+          "temperature": true,
+          "release_date": "2025-07-25",
+          "last_updated": "2025-07-25",
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": true,
+          "limit": {
+            "context": 131072,
+            "output": 65536
+          },
+          "cost": {
+            "input": 0,
+            "output": 0
+          },
+          "display_name": "Llama 3.3 Nemotron Super 49B v1.5",
           "type": "chat"
         },
         {
@@ -720,6 +837,153 @@
           "type": "chat"
         },
         {
+          "id": "nvidia/llama-3.1-nemotron-70b-instruct",
+          "name": "Llama 3.1 Nemotron 70B Instruct",
+          "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
+          "family": "nemotron",
+          "attachment": false,
+          "reasoning": {
+            "supported": false
+          },
+          "tool_call": true,
+          "temperature": true,
+          "release_date": "2025-04-15",
+          "last_updated": "2025-04-15",
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": true,
+          "limit": {
+            "context": 128000,
+            "output": 8192
+          },
+          "cost": {
+            "input": 0,
+            "output": 0
+          },
+          "display_name": "Llama 3.1 Nemotron 70B Instruct",
+          "type": "chat"
+        },
+        {
+          "id": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+          "name": "Llama 3.1 Nemotron Nano VL 8B v1",
+          "description": "Nemotron multimodal model for visual reasoning and agentic AI workflows",
+          "family": "nemotron",
+          "attachment": true,
+          "reasoning": {
+            "supported": true,
+            "default": true
+          },
+          "reasoning_options": [],
+          "tool_call": true,
+          "temperature": true,
+          "release_date": "2025-04-10",
+          "last_updated": "2025-04-10",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": true,
+          "limit": {
+            "context": 32768,
+            "output": 16384
+          },
+          "cost": {
+            "input": 0,
+            "output": 0
+          },
+          "display_name": "Llama 3.1 Nemotron Nano VL 8B v1",
+          "type": "chat"
+        },
+        {
+          "id": "nvidia/llama-3.3-nemotron-super-49b-v1",
+          "name": "Llama 3.3 Nemotron Super 49B v1",
+          "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
+          "family": "nemotron",
+          "attachment": false,
+          "reasoning": {
+            "supported": true,
+            "default": true
+          },
+          "reasoning_options": [
+            {
+              "type": "toggle"
+            }
+          ],
+          "tool_call": true,
+          "temperature": true,
+          "release_date": "2025-04-07",
+          "last_updated": "2025-04-07",
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": true,
+          "limit": {
+            "context": 131072,
+            "output": 65536
+          },
+          "cost": {
+            "input": 0,
+            "output": 0
+          },
+          "display_name": "Llama 3.3 Nemotron Super 49B v1",
+          "type": "chat"
+        },
+        {
+          "id": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+          "name": "Llama 3.1 Nemotron Ultra 253B",
+          "description": "Flagship Nemotron model for high-throughput reasoning and complex agents",
+          "family": "nemotron",
+          "attachment": false,
+          "reasoning": {
+            "supported": true,
+            "default": true
+          },
+          "reasoning_options": [
+            {
+              "type": "toggle"
+            }
+          ],
+          "tool_call": true,
+          "temperature": true,
+          "release_date": "2025-04-07",
+          "last_updated": "2025-04-07",
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": true,
+          "limit": {
+            "context": 128000,
+            "output": 16384
+          },
+          "cost": {
+            "input": 0,
+            "output": 0
+          },
+          "display_name": "Llama 3.1 Nemotron Ultra 253B",
+          "type": "chat"
+        },
+        {
           "id": "nvidia/sparsedrive",
           "name": "sparsedrive",
           "description": "Nemotron multimodal model for visual reasoning and agentic AI workflows",
@@ -781,6 +1045,45 @@
             "output": 0
           },
           "display_name": "bevformer",
+          "type": "chat"
+        },
+        {
+          "id": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+          "name": "Llama 3.1 Nemotron Nano 8B v1",
+          "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
+          "family": "nemotron",
+          "attachment": false,
+          "reasoning": {
+            "supported": true,
+            "default": true
+          },
+          "reasoning_options": [
+            {
+              "type": "toggle"
+            }
+          ],
+          "tool_call": true,
+          "temperature": true,
+          "release_date": "2025-03-18",
+          "last_updated": "2025-03-18",
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": true,
+          "limit": {
+            "context": 131072,
+            "output": 16384
+          },
+          "cost": {
+            "input": 0,
+            "output": 0
+          },
+          "display_name": "Llama 3.1 Nemotron Nano 8B v1",
           "type": "chat"
         },
         {
@@ -18419,7 +18722,7 @@
               "结构化输出"
             ],
             "raw_limits": [
-              "上下文窗口: 1024k 最大输入: 1024k 最大回答(默认 4k): 256k 最大思维链: 256k",
+              "上下文窗口: 1024k ���大输入: 1024k 最大回答(默认 4k): 256k 最大思维链: 256k",
               "最大 RPM: 500 最大 TPM: 1000000"
             ],
             "features": [
