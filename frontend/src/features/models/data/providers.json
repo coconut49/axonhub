@@ -9804,6 +9804,65 @@
       "display_name": "Anthropic",
       "models": [
         {
+          "id": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "description": "Frontier Claude Opus for complex agentic coding and enterprise work",
+          "family": "claude-opus",
+          "attachment": true,
+          "reasoning": {
+            "supported": true,
+            "default": true
+          },
+          "reasoning_options": [
+            {
+              "type": "toggle"
+            },
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": false,
+          "release_date": "2026-07-24",
+          "last_updated": "2026-07-24",
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "open_weights": false,
+          "limit": {
+            "context": 1000000,
+            "output": 128000
+          },
+          "cost": {
+            "input": 5,
+            "output": 25,
+            "cache_read": 0.5,
+            "cache_write": 6.25
+          },
+          "display_name": "Claude Opus 5",
+          "type": "chat",
+          "extra_capabilities": {
+            "reasoning": {
+              "supported": true
+            }
+          }
+        },
+        {
           "id": "claude-sonnet-5",
           "name": "Claude Sonnet 5",
           "description": "Everyday Claude agent model for coding, planning, browsing, and general work",
