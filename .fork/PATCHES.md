@@ -9,6 +9,6 @@
 
 ## opus-5 — 支持 claude-opus-5
 
-- 用途:网关支持 Anthropic 2026-07-24 发布的 `claude-opus-5`。上游未实现,本 patch 为自研。
-- 涉及:`llm/transformer/anthropic/claudecode/constants.go`(DefaultModels 加 `claude-opus-5`,claude-code OAuth 渠道取不到模型列表时的静态回退);`scripts/sync/models.json` 加 opus-5 条目并经 `node scripts/sync/sync-model-developers.js` 重新生成 `frontend/src/features/models/data/providers.json`(生成物不手改)。transformer 层 adaptive thinking / effort 按平台开关、不绑定模型 ID,无需改动;渠道模型价格在 DB 由管理界面配置,不属于代码。
-- 退役条件:上游 `DefaultModels()` 含 `claude-opus-5` 且 providers.json 数据源(ThinkInAIXYZ/PublicProviderConf)收录后,drop 本 commit。若上游实现方式与本 patch 相同,rebase 时 git 会因 patch-id 相同自动丢弃。
+- 用途:claude-code OAuth 渠道取不到模型列表时,静态回退列表包含 `claude-opus-5`。上游未实现,本 patch 为自研。
+- 涉及:`llm/transformer/anthropic/claudecode/constants.go` 的 `DefaultModels()` 加一行。模型元数据侧(providers.json 及其数据源)上游自 v1.0.0-beta6 起已收录,无需 fork 改动;transformer 层 adaptive thinking / effort 按平台开关、不绑定模型 ID,亦无需改动;渠道模型价格在 DB 由管理界面配置,不属于代码。
+- 退役条件:上游 `DefaultModels()` 含 `claude-opus-5` 后 drop 本 commit。若上游实现方式与本 patch 相同,rebase 时 git 会因 patch-id 相同自动丢弃。
